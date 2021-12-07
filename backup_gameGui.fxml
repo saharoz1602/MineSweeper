@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mines.MineController">
+   <children>
+      <GridPane fx:id="globalGrid">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="292.4" minHeight="10.0" prefHeight="175.8000061035156" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="564.4000114440918" minHeight="10.0" prefHeight="423.7999938964843" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane fx:id="boardGrid" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Pane fx:id="dataPane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnReset" layoutX="359.0" layoutY="86.0" mnemonicParsing="false" text="Reset">
+                     <font>
+                        <Font name="Guttman Miryam Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lblHeight" layoutX="19.0" layoutY="95.0" text="Height : " wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMines" layoutX="22.0" layoutY="132.0" text="Mines : ">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtWidth" layoutX="113.0" layoutY="57.0" />
+                  <TextField fx:id="txtHeight" layoutX="113.0" layoutY="93.0" />
+                  <TextField fx:id="txtMines" layoutX="113.0" layoutY="130.0" />
+                  <Label fx:id="lblWidth" layoutX="21.0" layoutY="59.0" text="Width : " wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="162.0" layoutY="7.0" text="Minesweeper" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</StackPane>
